@@ -17,7 +17,7 @@
     usuarios
     });
   }
-
+  //actualizar usuario
   const usuariosPut =async(req, res = response) =>{
 
     const id = req.params.id;
@@ -34,6 +34,7 @@
         usuario
     });
   } 
+  //Crear usuario
   const usuariosPost =async(req, res = response) =>{
     const {nombre,correo,password,rol} = req.body;
     const usuario = new Usuario({nombre,correo,password,rol});
