@@ -160,11 +160,11 @@ const obtenerImagen = async (req, res = response) => {
 
     if (modelo.img) {
       //Hay que borrar la imagen del servidor 
-      const pathImagen = path.join(__dirname, '../uploads', coleccion, modelo.img);
-      console.log('esta es la imagen ', pathImagen);
-      if (fs.existsSync(pathImagen)) {
-        return res.sendFile(pathImagen);
-      }
+      //const pathImagen = path.join(__dirname, '../uploads', coleccion, modelo.img);
+      //console.log('esta es la imagen ', pathImagen);
+      //if (fs.existsSync(pathImagen)) {
+        return res.json(modelo.img);
+      //}
     }
   } catch (error) {
     console.log('este es el error ', error);
